@@ -10,7 +10,7 @@ const themes = {
 };
 
 const Navbar = () => {
-	const [theme, setTheme] = useState(themes.dim);
+	const [theme, setTheme] = useState(themes.light);
 
 	const handleTheme = () => {
 		const { light, dim } = themes;
@@ -19,6 +19,10 @@ const Navbar = () => {
 		setTheme(newTheme);
 		console.log(theme);
 	};
+	useEffect(() => {
+		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+	}, [theme]);
 
 	return (
 		<nav className='bg-base-300'>
