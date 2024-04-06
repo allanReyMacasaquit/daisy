@@ -5,7 +5,7 @@ const Login = () => {
 	return (
 		<section className='h-screen grid place-items-center'>
 			<Form
-				method='post'
+				method='POST'
 				className='card w-96 p-8 bg-base-300 shadow-lg flex flex-col gap-y-4'
 			>
 				<h4 className='text-center text-3xl font-semibold'>Login</h4>
@@ -22,17 +22,18 @@ const Login = () => {
 					defaultValue='secret'
 				/>
 				<div className='mt-4'>
-					<SubmitBtn text='login' />
+					<SubmitBtn text='Login' />
 				</div>
-				<button type='button' className='btn btn-outline btn-block capitalize'>
+				<button type='button' className='btn btn-accent btn-block capitalize'>
 					guest user
 				</button>
 				<p className='text-center'>
 					Not yet a member?
-					<Link to='/register'>
-						<span className='hover:bg-base-100 px-2 rounded-md ml-1'>
-							Register
-						</span>
+					<Link
+						to='/register'
+						className='hover:bg-base-100 link link-hover link-primary px-2 rounded-md ml-1'
+					>
+						Register
 					</Link>
 				</p>
 			</Form>
