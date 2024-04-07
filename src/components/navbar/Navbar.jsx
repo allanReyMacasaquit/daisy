@@ -9,8 +9,12 @@ const themes = {
 	dim: 'dim',
 };
 
+const getThemeFromLocalStorage = () => {
+	return localStorage.getItem('theme' || themes.light);
+};
+
 const Navbar = () => {
-	const [theme, setTheme] = useState(themes.light);
+	const [theme, setTheme] = useState(getThemeFromLocalStorage());
 
 	const handleTheme = () => {
 		const { light, dim } = themes;
@@ -64,8 +68,8 @@ const Navbar = () => {
 					{/* THEME ICONS */}
 					<label className='swap swap-rotate ml-4'>
 						<input type='checkbox' onChange={handleTheme} />
-						<BsSunFill className='swap-on h-4 w-4' />
-						<BsMoonFill className='swap-off h-4 w-4' />
+						<BsSunFill className='swap-off h-4 w-4' />
+						<BsMoonFill className='swap-on h-4 w-4' />
 					</label>
 				</div>
 			</div>
