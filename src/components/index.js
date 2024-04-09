@@ -4,3 +4,4 @@ export { default as Header } from './header/Header';
 export { default as Navbar } from './navbar/Navbar';
 export { default as Hero } from './hero/Hero';
 export { default as ErrorElement } from './error/ErrorElement';
+export { default as FeaturedProducts } from './products/FeaturedProducts';

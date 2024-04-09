@@ -1,6 +1,9 @@
 import ProductsGrid from './ProductsGrid';
 import SectionTitle from './SectionTitle';
 
+export const loader = async () => {
+	return null;
+};
 const FeaturedProducts = () => {
 	return (
 		<div className='pt-24 '>
