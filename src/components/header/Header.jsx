@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
 	return (
-		<header className=' bg-neutral py-2 text-neutral-content '>
+		<header className=' py-2  '>
 			<div className='align-element flex justify-center sm:justify-end '>
 				{/* USER */}
 				{/* LINKS */}
-				<div className='flex gap-x-6 justify-center items-center'>
+				<div className='flex gap-x-6 justify-center items-center border rounded-md shadow p-1 shadow-slate-500'>
 					<Link to='/login' className='header-link'>
 						Sign in / Guest
 					</Link>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { customFetch, formatPrice } from '../utils';
+import { customFetch, formatPrice, generateAmountOptions } from '../utils';
 import { Link, useLoaderData } from 'react-router-dom';
 
 export const loader = async ({ params }) => {
@@ -22,7 +22,7 @@ const SingleProduct = () => {
 
 	return (
 		<section>
-			<div className='text-md breadcrumbs'>
+			<div className='text-md breadcrumbs -mt-10'>
 				<ul>
 					<li>
 						<Link to='/'>Home</Link>
@@ -38,7 +38,7 @@ const SingleProduct = () => {
 				<img
 					src={image}
 					alt={title}
-					className='w-96 h-96 object-cover shadow-md shadow-slate-500 rounded-lg lg:w-full  '
+					className='w-96 h-[100%] object-cover shadow-md shadow-slate-500 rounded-lg lg:w-full  '
 				/>
 				{/* PRODUCT INFO */}
 				<div>
@@ -63,7 +63,8 @@ const SingleProduct = () => {
 										key={color}
 										type='button'
 										className={`badge  w-6 h-6 mr-2  ${
-											color === productColor && 'border-2 border-secondary'
+											color === productColor &&
+											'border-4 border-double border-slate-100'
 										}`}
 										style={{ backgroundColor: color }}
 										onClick={() => setProductColor(color)}
@@ -73,7 +74,7 @@ const SingleProduct = () => {
 						</div>
 					</div>
 					{/* AMOUNT */}
-					<div className='form-control w-full max-w-xs'>
+					<div className='form-control w-full max-w-xs lg:mt-6'>
 						<label className='label'>
 							<h4 className='text-md font-medium tracking-wider capitalize'>
 								amount
@@ -84,15 +85,13 @@ const SingleProduct = () => {
 							value={amount}
 							onChange={handleAmount}
 						>
-							<option value={1}>1</option>
-							<option value={2}>2</option>
-							<option value={3}>3</option>
+							{generateAmountOptions(10)}
 						</select>
 					</div>
 					{/* CART BUTTON */}
 					<div className='mt-10 '>
 						<button
-							className='btn btn-primary btn-md'
+							className='btn btn-primary btn-info lg:mt-6'
 							onClick={() => console.log('add to bag')}
 						>
 							Add to bag

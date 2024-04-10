@@ -29,7 +29,7 @@ const Navbar = () => {
 	}, [theme]);
 
 	return (
-		<nav className='bg-base-300'>
+		<nav className='bg-base-300 shadow shadow-slate-500'>
 			<div className='navbar align-element '>
 				<div className='navbar-start'>
 					{/* Title */}
@@ -38,7 +38,7 @@ const Navbar = () => {
 						<span className='text-orange-800 uppercase ml-2'>store</span>
 					</NavLink>
 					{/* DROPDOWN */}
-					<div className='dropdown'>
+					<div className='dropdown opacity-95'>
 						<label tabIndex={0} className='btn btn-ghost lg:hidden'>
 							<FaBarsStaggered className='h-6 w-6' />
 						</label>

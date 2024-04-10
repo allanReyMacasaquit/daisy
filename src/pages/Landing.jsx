@@ -5,9 +5,9 @@ import { customFetch } from '../utils';
 const featuredUrl = '/products?featured=true';
 export const loader = async () => {
 	const response = await customFetch(featuredUrl);
-	const featuredProducts = response.data.data;
+	const products = response.data.data;
 	// console.log(featuredProducts);
-	return { featuredProducts };
+	return { products };
 };
 const Landing = () => {
 	return (

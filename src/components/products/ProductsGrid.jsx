@@ -2,17 +2,17 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { formatPrice } from '../../utils';
 
 const ProductsGrid = () => {
-	const { featuredProducts } = useLoaderData();
+	const { products } = useLoaderData();
 
 	return (
 		<div className='pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 '>
-			{featuredProducts.map((product) => {
+			{products.map((product) => {
 				const { title, price, image } = product.attributes;
 				return (
 					<Link
 						key={product.id}
 						to={`/products/${product.id}`}
-						className='card w-full shadow-lg shadow-slate-500 transition duration-300 '
+						className='card w-full shadow shadow-slate-500 transition duration-300 '
 					>
 						<figure className='px-4 pt-4'>
 							<img
