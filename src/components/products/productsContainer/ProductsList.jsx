@@ -4,7 +4,7 @@ import { formatPrice } from '../../../utils';
 const ProductsList = () => {
 	const { products } = useLoaderData();
 	return (
-		<div className='mt-12 grid  gap-y-8'>
+		<div className='mt-12 grid  gap-y-4 '>
 			{products.map((product) => {
 				const { title, price, image, company } = product.attributes;
 				const dollarsAmount = formatPrice(price);
@@ -12,20 +12,18 @@ const ProductsList = () => {
 					<Link
 						key={product.id}
 						to={`/products/${product.id}`}
-						className='p-8 rounded-lg shadow shadow-slate-500  flex flex-col sm:flex-row gap-y-4 flex-wrap bg-base-100  hover:shadow-2xl duration-300 group '
+						className='p-4 rounded-2xl shadow shadow-slate-500  flex flex-col sm:flex-row gap-y-8 flex-wrap bg-base-100 hover:shadow-2xl duration-300 group '
 					>
 						<figure className=''>
 							<img
 								src={image}
 								alt={title}
-								className='h-36 w-72 rounded-lg sm:h-32 sm:w-80 object-cover group-hover:scale-105 transition  duration-300'
+								className='h-64 w-80 rounded-xl sm:h-64 sm:w-80 object-cover group-hover:scale-105 transition duration-300'
 							/>
 						</figure>
 						<div className='ml-0 sm:ml-16'>
-							<h3 className='capitalize font-medium text-lg'>{title}</h3>
-							<h4 className='capitalize text-md text-neutral-content'>
-								{company}
-							</h4>
+							<h3 className='capitalize font-medium text-xl'>{title}</h3>
+							<h4 className='capitalize text-md'>{company}</h4>
 
 							{/* COLOR */}
 						</div>

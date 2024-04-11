@@ -34,8 +34,8 @@ const Navbar = () => {
 				<div className='navbar-start'>
 					{/* Title */}
 					<NavLink to='/' className='hidden lg:flex  text-3xl items-center '>
-						<h4 className='text-slate-600 cap'>daisy</h4>
-						<span className='text-orange-800 uppercase ml-2'>store</span>
+						<h4 className='text-xl capitalize'>daisy</h4>
+						<span className='text-secondary italic uppercase ml-2'>store</span>
 					</NavLink>
 					{/* DROPDOWN */}
 					<div className='dropdown opacity-95'>
@@ -60,7 +60,7 @@ const Navbar = () => {
 					<NavLink to='cart' className='btn btn-ghost btn-circle btn-md ml-4'>
 						<div className='indicator'>
 							<BsCart3 className='h-6 w-6' />
-							<span className='badge badge-sm badge-primary indicator-item'>
+							<span className='badge badge-sm badge-secondary indicator-item'>
 								8
 							</span>
 						</div>
