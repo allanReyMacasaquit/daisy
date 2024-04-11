@@ -8,6 +8,6 @@ export { default as FeaturedProducts } from './featured/FeaturedProducts';
 export { default as SectionTitle } from './products/SectionTitle';
 export { default as ProductsGrid } from './products/productsContainer/ProductsGrid';
 export { default as ProductsList } from './products/productsContainer/ProductsList';
-export { default as Filters } from './products/Filters';
+export { default as Filters } from './products/filter/Filters';
 export { default as ProductsContainer } from './products/productsContainer/ProductsContainer';
 export { default as PaginationContainer } from './products/PaginationContainer';
