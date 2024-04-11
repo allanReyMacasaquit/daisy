@@ -1,4 +1,4 @@
-import ProductsGrid from '../products/ProductsGrid';
+import ProductsGrid from '../products/productsContainer/ProductsGrid';
 import SectionTitle from '../products/SectionTitle';
 
 export const loader = async () => {
